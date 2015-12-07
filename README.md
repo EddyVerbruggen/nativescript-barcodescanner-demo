@@ -4,12 +4,17 @@ Demo app for the {N} [barcodescanner plugin](https://www.npmjs.com/package/nativ
 
 ## Installation
 
-This app is built with the [NativeScript CLI](https://github.com/NativeScript/nativescript-cli).
+### Telerik Platform
+
+You can clone this repository in you [Telerik Platform account](https://platform.telerik.com).
+
+### NativeScript CLI
 Once you have the [CLI installed](https://github.com/NativeScript/nativescript-cli#installation), start by cloning the repo:
 
 ```
 $ git clone https://github.com/EddyVerbruggen/nativescript-barcodescanner-demo
 $ cd nativescript-barcodescanner-demo
+$ cd BarcodeScanner
 ```
 
 Next, install the app's iOS and Android runtimes, as well as the app's npm dependencies:
