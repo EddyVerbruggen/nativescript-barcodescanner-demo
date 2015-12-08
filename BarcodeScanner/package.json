@@ -1,16 +1,16 @@
 {
-    "nativescript": {
-        "id": "com.telerik.plugindemo.barcodescanner",
-        "tns-ios": {
-	          "version": "1.4.1"
-        },
-        "tns-android": {
-  	        "version": "1.4.0"
-        }
-    },
-    "dependencies": {
-        "tns-core-modules": "1.4.0",
-        "nativescript-barcodescanner": "1.2.0"
-    },
-    "devDependencies": {}
+	"nativescript": {
+		"id": "com.telerik.plugindemo.barcodescanner",
+		"tns-ios": {
+			"version": "1.4.1"
+		},
+		"tns-android": {
+			"version": "1.4.0"
+		}
+	},
+	"dependencies": {
+		"tns-core-modules": "1.4.0",
+		"nativescript-barcodescanner": "1.2.0"
+	},
+	"devDependencies": {}
 }
