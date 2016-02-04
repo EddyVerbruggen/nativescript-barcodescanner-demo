@@ -14,9 +14,9 @@ var DemoAppModel = (function (_super) {
             title: "Scanning available?",
             message: avail ? "YES" : "NO",
             okButtonText: "OK"
-          })
+          });
         }
-    )
+    );
   };
 
   DemoAppModel.prototype.scan = function (front, flip) {
@@ -31,12 +31,12 @@ var DemoAppModel = (function (_super) {
             title: "Scan result",
             message: "Format: " + result.format + ",\nValue: " + result.text,
             okButtonText: "OK"
-          })
+          });
         },
         function(errorMessage) {
           console.log("No scan. " + errorMessage);
         }
-    )
+    );
   };
 
   DemoAppModel.prototype.doScanWithFrontCamera = function () {
@@ -54,9 +54,9 @@ var DemoAppModel = (function (_super) {
             title: "Permission granted?",
             message: granted ? "YES" : "NO",
             okButtonText: "OK"
-          })
+          });
         }
-    )
+    );
   };
 
   DemoAppModel.prototype.doRequestCameraPermission = function () {
@@ -64,7 +64,7 @@ var DemoAppModel = (function (_super) {
         function() {
           console.log("Camera permission requested");
         }
-    )
+    );
   };
 
   return DemoAppModel;
