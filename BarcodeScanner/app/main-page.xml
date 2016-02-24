@@ -16,16 +16,16 @@
             <StackLayout cssClass="tab-content">
               <Label text="Checking availability" cssClass="title"/>
               <Label text="It can never hurt to check upfront if a device is capable of scanning a barcode." textWrap="true"/>
-  			      <Button text="available?" tap="{{ doCheckAvailable }}" />
+  			      <Button text="available?" tap="{{ doCheckAvailable }}" cssClass="button" />
 
               <Label text="Camera permission" cssClass="title"/>
               <Label text="Android 6 requires runtime user consent." textWrap="true"/>
-              <Button text="has permission?" tap="{{ doCheckHasCameraPermission }}" />
-              <Button text="request permission" tap="{{ doRequestCameraPermission }}" />
+              <Button text="has permission?" tap="{{ doCheckHasCameraPermission }}" cssClass="button" />
+              <Button text="request permission" tap="{{ doRequestCameraPermission }}" cssClass="button" />
 
               <Label text="Scanning" cssClass="title"/>
-  			      <Button text="back camera, with flip" tap="{{ doScanWithBackCamera }}" />
-  			      <Button text="front camera, no flip (Android)" tap="{{ doScanWithFrontCamera }}" />
+  			      <Button text="back camera, with flip" tap="{{ doScanWithBackCamera }}" cssClass="button" />
+  			      <Button text="front camera, no flip (Android)" tap="{{ doScanWithFrontCamera }}" cssClass="button" />
             </StackLayout>
           </ScrollView>
         </TabViewItem.view>
