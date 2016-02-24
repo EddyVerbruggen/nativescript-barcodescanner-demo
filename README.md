@@ -21,6 +21,7 @@ Next, install the app's iOS and Android runtimes, as well as the app's npm depen
 
 ```
 $ tns install
+$ tns install typescript
 ```
 
 From there you can use the `run` command to run the demo app on iOS:
