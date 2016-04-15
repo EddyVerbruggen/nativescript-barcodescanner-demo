@@ -2,7 +2,7 @@
   "ProjectName": "BarcodeScanner",
   "ProjectGuid": "f03f6a5c-914b-48be-862c-04f88787c3d7",
   "projectVersion": 1,
-  "AppIdentifier": "com.telerik.plugindemo.barcodescanner",
+  "AppIdentifier": "com.telerik.plugindemo.nativescript.barcodescanner",
   "DisplayName": "BarcodeScanner",
   "Author": "Telerik",
   "Description": "BarcodeScanner",
