@@ -26,6 +26,10 @@
               <Label text="Scanning" cssClass="title"/>
   			      <Button text="back camera, with flip" tap="{{ doScanWithBackCamera }}" cssClass="button" />
   			      <Button text="front camera, no flip (Android)" tap="{{ doScanWithFrontCamera }}" cssClass="button" />
+
+              <Label text="Orientation lock (Android)" cssClass="title"/>
+  			      <Button text="back camera, portrait" tap="{{ doScanPortrait }}" cssClass="button" />
+  			      <Button text="back camera, landscape" tap="{{ doScanLandscape }}" cssClass="button" />
             </StackLayout>
           </ScrollView>
         </TabViewItem.view>

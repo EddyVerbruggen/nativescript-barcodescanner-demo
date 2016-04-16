@@ -19,12 +19,13 @@ var DemoAppModel = (function (_super) {
     );
   };
 
-  DemoAppModel.prototype.scan = function (front, flip) {
+  DemoAppModel.prototype.scan = function (front, flip, orientation) {
     barcodescanner.scan({
       cancelLabel: "Stop scanning", // iOS only, default 'Close'
-      message: "Go scan something", // Android only, default is 'Place a barcode inside the viewfinder rectangle to scan it.'
+      message: "Go scan something :)", // Android only, default is 'Place a barcode inside the viewfinder rectangle to scan it.'
       preferFrontCamera: front,     // Android only, default false
-      showFlipCameraButton: flip    // Android only, default false (on iOS it's always available)
+      showFlipCameraButton: flip,   // Android only, default false (on iOS it's always available)
+      orientation: orientation      // Android only, default undefined (sensor-driven orientation), other options: portrait|landscape
     }).then(
         function(result) {
           dialogs.alert({
@@ -45,6 +46,14 @@ var DemoAppModel = (function (_super) {
 
   DemoAppModel.prototype.doScanWithBackCamera = function () {
     this.scan(false, true);
+  };
+
+  DemoAppModel.prototype.doScanPortrait = function () {
+    this.scan(false, true, "portrait");
+  };
+
+  DemoAppModel.prototype.doScanLandscape = function () {
+    this.scan(false, true, "landscape");
   };
 
   DemoAppModel.prototype.doCheckHasCameraPermission = function () {
