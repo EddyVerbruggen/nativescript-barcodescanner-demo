@@ -21,6 +21,7 @@ var DemoAppModel = (function (_super) {
 
   DemoAppModel.prototype.scan = function (front, flip, orientation) {
     barcodescanner.scan({
+      formats: "QR_CODE, PDF_417",
       cancelLabel: "Stop scanning", // iOS only, default 'Close'
       message: "Go scan something :)", // Android only, default is 'Place a barcode inside the viewfinder rectangle to scan it.'
       preferFrontCamera: front,     // Android only, default false
