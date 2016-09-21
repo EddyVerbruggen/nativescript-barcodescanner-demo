@@ -19,9 +19,31 @@ var DemoAppModel = (function (_super) {
     );
   };
 
+  DemoAppModel.prototype.doContinuousScan = function () {
+    barcodescanner.scan({
+      continuousScanCallback: function (result) {
+        console.log(result.format + ": " + result.text);
+      }
+    });
+  };
+
+  DemoAppModel.prototype.doContinuousScanMax3 = function () {
+    var count = 0;
+    barcodescanner.scan({
+      continuousScanCallback: function (result) {
+        count++;
+        console.log(result.format + ": " + result.text + " (count: " + count + ")");
+        if (count == 3) {
+          barcodescanner.stop();
+          // count = 0;
+        }
+      }
+    });
+  };
+
   DemoAppModel.prototype.scan = function (front, flip, orientation) {
     barcodescanner.scan({
-      formats: "QR_CODE, PDF_417",
+      formats: "QR_CODE, EAN_13",
       cancelLabel: "Stop scanning", // iOS only, default 'Close'
       message: "Go scan something :)", // Android only, default is 'Place a barcode inside the viewfinder rectangle to scan it.'
       preferFrontCamera: front,     // Android only, default false
@@ -29,6 +51,7 @@ var DemoAppModel = (function (_super) {
       orientation: orientation      // Android only, default undefined (sensor-driven orientation), other options: portrait|landscape
     }).then(
         function(result) {
+          // Note that this Promise is never invoked when a 'continuousScanCallback' function is provided
           dialogs.alert({
             title: "Scan result",
             message: "Format: " + result.format + ",\nValue: " + result.text,

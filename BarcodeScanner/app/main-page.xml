@@ -23,13 +23,18 @@
               <Button text="has permission?" tap="{{ doCheckHasCameraPermission }}" cssClass="button" />
               <Button text="request permission" tap="{{ doRequestCameraPermission }}" cssClass="button" />
 
-              <Label text="Scanning" cssClass="title"/>
+              <Label text="Scanning (QR & EAN-13)" cssClass="title"/>
   			      <Button text="back camera, with flip" tap="{{ doScanWithBackCamera }}" cssClass="button" />
   			      <Button text="front camera, no flip (Android)" tap="{{ doScanWithFrontCamera }}" cssClass="button" />
+
+              <Label text="Continuous scanning (see console)" cssClass="title"/>
+  			      <Button text="stop after 3 results" tap="{{ doContinuousScanMax3 }}" cssClass="button" />
+  			      <Button text="scan till you drop" tap="{{ doContinuousScan }}" cssClass="button" />
 
               <Label text="Orientation lock (Android)" cssClass="title"/>
   			      <Button text="back camera, portrait" tap="{{ doScanPortrait }}" cssClass="button" />
   			      <Button text="back camera, landscape" tap="{{ doScanLandscape }}" cssClass="button" />
+
             </StackLayout>
           </ScrollView>
         </TabViewItem.view>
