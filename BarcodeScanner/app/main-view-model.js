@@ -44,11 +44,12 @@ var DemoAppModel = (function (_super) {
   DemoAppModel.prototype.scan = function (front, flip, orientation) {
     barcodescanner.scan({
       formats: "QR_CODE, EAN_13",
-      cancelLabel: "Stop scanning", // iOS only, default 'Close'
-      message: "Go scan something :)", // Android only, default is 'Place a barcode inside the viewfinder rectangle to scan it.'
+      cancelLabel: "EXIT. Also, try the volume buttons!", // iOS only, default 'Close'
+      message: "Use the volume buttons for extra light", // Android only, default is 'Place a barcode inside the viewfinder rectangle to scan it.'
       preferFrontCamera: front,     // Android only, default false
       showFlipCameraButton: flip,   // Android only, default false (on iOS it's always available)
-      orientation: orientation      // Android only, default undefined (sensor-driven orientation), other options: portrait|landscape
+      orientation: orientation,      // Android only, default undefined (sensor-driven orientation), other options: portrait|landscape
+      openSettingsIfPermissionWasPreviouslyDenied: true // On iOS you can send the user to the settings app if access was previously denied
     }).then(
         function(result) {
           // Note that this Promise is never invoked when a 'continuousScanCallback' function is provided
