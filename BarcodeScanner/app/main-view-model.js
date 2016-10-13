@@ -1,5 +1,6 @@
 var observable = require("data/observable");
-var barcodescanner = require("nativescript-barcodescanner");
+var BarcodeScanner = require("nativescript-barcodescanner").BarcodeScanner;
+var barcodescanner = new BarcodeScanner();
 var dialogs = require("ui/dialogs");
 var DemoAppModel = (function (_super) {
   __extends(DemoAppModel, _super);

@@ -1,6 +1,8 @@
 # nativescript-barcodescanner demo app
 
-Demo app for the {N} [barcodescanner plugin](https://www.npmjs.com/package/nativescript-barcodescanner)
+(@Deprecated) Demo app for the {N} [barcodescanner plugin](https://www.npmjs.com/package/nativescript-barcodescanner)
+
+The latest demo app (in TypeScript) is bundled with [the plugin repo](https://github.com/EddyVerbruggen/nativescript-barcodescanner#nativescript-barcodescanner).
 
 ## Installation
 

@@ -9,7 +9,7 @@
     }
   },
   "dependencies": {
-    "nativescript-barcodescanner": "^1.0.0",
+    "nativescript-barcodescanner": "^2.0.0",
     "nativescript-theme-core": "^0.1.2",
     "tns-core-modules": "^2.3.0"
   },
